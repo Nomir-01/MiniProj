@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../Screens/ProductsScreen.dart';
+
 class CustomCategoryTile extends StatefulWidget {
   final String? Tileimage;
   final String Name;
@@ -29,7 +31,17 @@ class _CustomCategoryTileState extends State<CustomCategoryTile> {
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ProductScreen(
+                ProductName: widget.Name,
+                ProductDesc: widget.Desc,
+              ),
+            ),
+          );
+        },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

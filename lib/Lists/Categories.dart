@@ -16,7 +16,7 @@ List Categories = [
   },
   {
     "Name": "Fruits",
-    "Desc": "Fresh & Organic",
+    "Desc": "Organic",
     "Image": Null,
   },
   {
