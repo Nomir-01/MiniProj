@@ -23,6 +23,7 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 250, 251, 253),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 42, 75, 160),
         title: Text(
