@@ -5,6 +5,7 @@ List Fish = [
     "Desc": "This is a large fish",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
   {
@@ -13,6 +14,7 @@ List Fish = [
     "Desc": "This is a medium fish",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
   {
@@ -21,6 +23,7 @@ List Fish = [
     "Desc": "This is a small fish",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
 ];

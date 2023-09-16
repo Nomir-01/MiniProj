@@ -22,7 +22,7 @@ class _CustomSlidingTilesState extends State<CustomSlidingTiles> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.fromLTRB(15, 20, 15, 0),
-      height: 100,
+      height: MediaQuery.of(context).size.height * 0.14,
       width: MediaQuery.of(context).size.width * 0.65,
       decoration: BoxDecoration(
         color: widget.Tilecolor,
@@ -41,7 +41,7 @@ class _CustomSlidingTilesState extends State<CustomSlidingTiles> {
           ),
           Container(
             margin: const EdgeInsets.only(right: 10),
-            height: 80,
+            height: MediaQuery.of(context).size.height * 0.1,
             width: MediaQuery.of(context).size.width * 0.35,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -50,7 +50,7 @@ class _CustomSlidingTilesState extends State<CustomSlidingTiles> {
                 const Text(
                   "Get",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     color: Color.fromARGB(250, 250, 251, 253),
                     fontWeight: FontWeight.w300,
                   ),
@@ -58,7 +58,7 @@ class _CustomSlidingTilesState extends State<CustomSlidingTiles> {
                 Text(
                   widget.Discounttext ?? "50% OFF",
                   style: const TextStyle(
-                    fontSize: 25,
+                    fontSize: 22,
                     color: Color.fromARGB(250, 250, 251, 253),
                     fontWeight: FontWeight.w500,
                   ),

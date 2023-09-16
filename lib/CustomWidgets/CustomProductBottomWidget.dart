@@ -3,12 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/CustomWidgets/CustomButton.dart';
+import 'package:miniproj/Lists/Cart.dart';
 
 class CustomProductBottomWidget extends StatefulWidget {
   final String Details;
+  final List ProductList;
+  final int Index;
   const CustomProductBottomWidget({
     super.key,
     required this.Details,
+    required this.ProductList,
+    required this.Index,
   });
 
   @override
@@ -17,10 +22,28 @@ class CustomProductBottomWidget extends StatefulWidget {
 }
 
 class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
+  void AddToCart() {
+    if (widget.ProductList[widget.Index]["InCart"] == false) {
+      widget.ProductList[widget.Index]["InCart"] = true;
+      widget.ProductList[widget.Index]["Qty"] += 1;
+      Cart.add(widget.ProductList[widget.Index]);
+    } else {
+      final int indexInCart = Cart.indexWhere(
+        (product) =>
+            product["Name"] == widget.ProductList[widget.Index]["Name"],
+      );
+      if (indexInCart != -1) {
+        Cart[indexInCart]["Qty"] += 1;
+      } else {
+        print("Error: Product not found in cart.");
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+      margin: const EdgeInsets.fromLTRB(20, 10, 20, 0),
       height: MediaQuery.of(context).size.height * 0.32,
       width: MediaQuery.of(context).size.width * 1,
       decoration: BoxDecoration(
@@ -43,12 +66,16 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                   BoxColor: Color.fromARGB(255, 250, 251, 253),
                   TextColor: Color.fromARGB(255, 42, 75, 160),
                   BorderColor: Color.fromARGB(167, 217, 224, 240),
+                  onPressed: () {
+                    AddToCart();
+                  },
                 ),
                 CustomButton(
                   ButtonText: "Buy Now",
                   BoxColor: Color.fromARGB(255, 42, 75, 160),
                   TextColor: Color.fromARGB(255, 250, 251, 253),
                   BorderColor: Color.fromARGB(255, 250, 251, 253),
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -64,7 +91,7 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                 const Text(
                   "Details",
                   style: TextStyle(
-                    fontSize: 28,
+                    fontSize: 24,
                     fontWeight: FontWeight.w500,
                     color: Color.fromARGB(255, 250, 251, 253),
                   ),
@@ -75,7 +102,7 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                 Text(
                   widget.Details,
                   style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.w400,
                       color: Color.fromARGB(255, 250, 251, 253),
                       letterSpacing: 0.24),

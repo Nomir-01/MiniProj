@@ -29,11 +29,11 @@ class _CustomProductTopWidgetState extends State<CustomProductTopWidget> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            margin: const EdgeInsets.only(top: 30, left: 20),
+            margin: const EdgeInsets.only(top: 10, left: 20),
             child: Text(
               widget.Title1,
               style: const TextStyle(
-                fontSize: 55,
+                fontSize: 45,
                 fontWeight: FontWeight.w300,
                 color: Color.fromARGB(255, 30, 34, 43),
               ),
@@ -44,7 +44,7 @@ class _CustomProductTopWidgetState extends State<CustomProductTopWidget> {
             child: Text(
               widget.Title2,
               style: const TextStyle(
-                fontSize: 55,
+                fontSize: 45,
                 fontWeight: FontWeight.w500,
                 color: Color.fromARGB(255, 30, 34, 43),
               ),
@@ -105,7 +105,7 @@ class _CustomProductTopWidgetState extends State<CustomProductTopWidget> {
                 Text(
                   "\$${widget.Price.toString()}/KG",
                   style: const TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(255, 42, 75, 160),
                   ),

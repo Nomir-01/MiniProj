@@ -35,7 +35,9 @@ class _HomeWidget1State extends State<HomeWidget1> {
                 const SizedBox(width: 10),
                 const Expanded(
                   child: TextField(
-                    style: TextStyle(),
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 248, 249, 251),
+                    ),
                     decoration: InputDecoration(
                         hintText: "Search Products or store",
                         hintStyle: TextStyle(
@@ -49,14 +51,15 @@ class _HomeWidget1State extends State<HomeWidget1> {
           const Spacer(),
           Container(
             margin: const EdgeInsets.all(15),
-            width: double.infinity,
-            height: 50,
+            width: MediaQuery.of(context).size.width * 1,
+            height: MediaQuery.of(context).size.height * 0.08,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.43,
-                  height: 50,
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.45,
+                  height: MediaQuery.of(context).size.height * 0.1,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -89,9 +92,9 @@ class _HomeWidget1State extends State<HomeWidget1> {
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.16,
-                  height: 50,
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.2,
+                  height: MediaQuery.of(context).size.height * 0.1,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,

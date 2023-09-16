@@ -22,8 +22,8 @@ class _CustomProductTileState extends State<CustomProductTile> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.fromLTRB(15, 20, 15, 0),
-      height: MediaQuery.of(context).size.height * 0.22,
-      width: MediaQuery.of(context).size.width * 0.35,
+      height: MediaQuery.of(context).size.height * 0.25,
+      width: MediaQuery.of(context).size.width * 0.4,
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 242, 243, 243),
         borderRadius: BorderRadius.circular(20.0),
@@ -46,7 +46,7 @@ class _CustomProductTileState extends State<CustomProductTile> {
                   Text(
                     "\$${widget.Price}",
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       color: Color.fromARGB(255, 30, 34, 43),
                       fontWeight: FontWeight.w500,
                     ),

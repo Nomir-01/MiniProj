@@ -19,8 +19,9 @@ class _CustomGridViewState extends State<CustomGridView> {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisSpacing: 5,
+        mainAxisSpacing: 10,
         crossAxisSpacing: 5,
+        childAspectRatio: 5 / 6,
       ),
       itemCount: Categories.length,
       itemBuilder: ((context, index) {
@@ -54,7 +55,7 @@ class _CustomGridViewState extends State<CustomGridView> {
                 Text(
                   Categories[index]["Name"],
                   style: const TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     color: Color.fromARGB(255, 30, 34, 43),
                     fontWeight: FontWeight.w500,
                   ),

@@ -31,7 +31,7 @@ class _CustomTopWidgetState extends State<CustomTopWidget> {
             child: Text(
               widget.Title1,
               style: const TextStyle(
-                fontSize: 55,
+                fontSize: 45,
                 fontWeight: FontWeight.w300,
                 color: Color.fromARGB(255, 250, 251, 253),
               ),
@@ -42,7 +42,7 @@ class _CustomTopWidgetState extends State<CustomTopWidget> {
             child: Text(
               widget.Title2,
               style: const TextStyle(
-                fontSize: 55,
+                fontSize: 45,
                 fontWeight: FontWeight.w500,
                 color: Color.fromARGB(255, 250, 251, 253),
               ),

@@ -5,6 +5,7 @@ List Fruits = [
     "Desc": "This is an apple",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
   {
@@ -13,6 +14,7 @@ List Fruits = [
     "Desc": "This is a orange",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
   {
@@ -21,6 +23,7 @@ List Fruits = [
     "Desc": "This is a banana",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
 ];

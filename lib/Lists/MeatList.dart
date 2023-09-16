@@ -5,6 +5,7 @@ List Meat = [
     "Desc": "This is cow meat",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
   {
@@ -13,6 +14,7 @@ List Meat = [
     "Desc": "This is goat meat",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
   {
@@ -21,6 +23,7 @@ List Meat = [
     "Desc": "This is chicken meat",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
 ];

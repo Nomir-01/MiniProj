@@ -41,7 +41,7 @@ class _HomeWidget2State extends State<HomeWidget2> {
         Container(
           margin: const EdgeInsets.only(top: 20, left: 15),
           width: MediaQuery.of(context).size.width * 0.52,
-          height: 40,
+          height: MediaQuery.of(context).size.height * 0.06,
           child: const Text(
             "Categories",
             style: TextStyle(
@@ -102,7 +102,7 @@ class _HomeWidget2State extends State<HomeWidget2> {
         Container(
           margin: const EdgeInsets.only(top: 20, left: 15),
           width: MediaQuery.of(context).size.width * 0.25,
-          height: 40,
+          height: MediaQuery.of(context).size.height * 0.06,
           child: const Text(
             "Deals",
             style: TextStyle(

@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:miniproj/Widgest/ProductWidget.dart';
+import 'package:miniproj/Screens/CartScreen.dart';
+
+import '../CustomWidgets/CustomProductBottomWidget.dart';
+import '../CustomWidgets/CustomProductTopWidget.dart';
 
 class SingleProductScreen extends StatefulWidget {
   final List ProductList;
@@ -38,15 +41,33 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
             children: [
               IconButton(onPressed: () {}, icon: Icon(Icons.favorite)),
               IconButton(
-                  onPressed: () {}, icon: Image.asset("assets/images/bag.png")),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CartScreen(),
+                      ),
+                    );
+                  },
+                  icon: Image.asset("assets/images/bag.png")),
             ],
           )
         ],
       ),
-      body: ProductWidget(
-        ProductList: widget.ProductList,
-        SubHeading: widget.SubHeading,
-        Index: widget.Index,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          CustomProductTopWidget(
+            Title1: widget.ProductList[widget.Index]["Name"],
+            Title2: widget.SubHeading,
+            Price: widget.ProductList[widget.Index]["Price"],
+          ),
+          CustomProductBottomWidget(
+            Details: widget.ProductList[widget.Index]["Desc"],
+            ProductList: widget.ProductList,
+            Index: widget.Index,
+          ),
+        ],
       ),
     );
   }

@@ -5,6 +5,7 @@ List Snacks = [
     "Desc": "This is chips",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
   {
@@ -13,6 +14,7 @@ List Snacks = [
     "Desc": "This is juice",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
   {
@@ -21,6 +23,7 @@ List Snacks = [
     "Desc": "This is chocolate",
     "Qty": 0,
     "IsFav": false,
+    "InCart": false,
     "Image": Null,
   },
 ];

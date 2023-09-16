@@ -24,8 +24,9 @@ class _CustomProductGridState extends State<CustomProductGrid> {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisSpacing: 5,
+        mainAxisSpacing: 10,
         crossAxisSpacing: 5,
+        childAspectRatio: 5 / 6,
       ),
       itemCount: widget.Product.length,
       itemBuilder: ((context, index) {
@@ -65,7 +66,7 @@ class _CustomProductGridState extends State<CustomProductGrid> {
                   child: Text(
                     widget.Product[index]["Name"].toString(),
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       color: Color.fromARGB(255, 30, 34, 43),
                       fontWeight: FontWeight.w500,
                     ),
@@ -76,7 +77,7 @@ class _CustomProductGridState extends State<CustomProductGrid> {
                   child: Text(
                     "\$${widget.Product[index]["Price"].toString()}",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       color: Color.fromARGB(255, 30, 34, 43),
                       fontWeight: FontWeight.w500,
                     ),

@@ -7,12 +7,14 @@ class CustomButton extends StatefulWidget {
   final Color BoxColor;
   final Color TextColor;
   final Color BorderColor;
+  final VoidCallback onPressed;
   const CustomButton({
     super.key,
     required this.ButtonText,
     required this.BoxColor,
     required this.TextColor,
     required this.BorderColor,
+    required this.onPressed,
   });
 
   @override
@@ -23,12 +25,14 @@ class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        widget.onPressed();
+      },
       child: Center(
         child: Text(
           widget.ButtonText,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 16,
             color: widget.TextColor,
           ),
         ),
