@@ -31,6 +31,7 @@ class _CustomProductTileState extends State<CustomProductTile> {
       child: InkWell(
         onTap: () {},
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(
               widget.Tileimage ?? "assets/images/Image Icon.png",

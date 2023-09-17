@@ -22,7 +22,7 @@ class _CustomSlidingTilesState extends State<CustomSlidingTiles> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.fromLTRB(15, 20, 15, 0),
-      height: MediaQuery.of(context).size.height * 0.14,
+      height: MediaQuery.of(context).size.height * 0.15,
       width: MediaQuery.of(context).size.width * 0.65,
       decoration: BoxDecoration(
         color: widget.Tilecolor,
@@ -66,7 +66,7 @@ class _CustomSlidingTilesState extends State<CustomSlidingTiles> {
                 const Text(
                   "On First 03 Orders",
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 14,
                     color: Color.fromARGB(250, 250, 251, 253),
                     fontWeight: FontWeight.w400,
                   ),
