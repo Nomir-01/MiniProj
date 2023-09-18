@@ -7,6 +7,7 @@ List Fruits = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Fruits",
   },
   {
     "Name": "Orange",
@@ -16,6 +17,7 @@ List Fruits = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Fruits",
   },
   {
     "Name": "Banana",
@@ -25,5 +27,6 @@ List Fruits = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Fruits",
   },
 ];

@@ -7,6 +7,7 @@ List Fish = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Fish",
   },
   {
     "Name": "Medium Fish",
@@ -16,6 +17,7 @@ List Fish = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Fish",
   },
   {
     "Name": "Small Fish",
@@ -25,5 +27,6 @@ List Fish = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Fish",
   },
 ];

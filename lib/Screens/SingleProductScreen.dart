@@ -39,17 +39,26 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
         actions: [
           Row(
             children: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.favorite)),
               IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CartScreen(),
-                      ),
-                    );
-                  },
-                  icon: Image.asset("assets/images/bag.png")),
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.favorite,
+                    color: Color.fromARGB(255, 248, 249, 251),
+                  )),
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CartScreen(),
+                    ),
+                  );
+                },
+                icon: Icon(
+                  Icons.shopping_cart,
+                  color: Color.fromARGB(255, 248, 249, 251),
+                ),
+              ),
             ],
           )
         ],

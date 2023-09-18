@@ -1,21 +1,61 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:miniproj/Functions/FindListFunc.dart';
 
 import '../Lists/Cart.dart';
 
 class CartWidget2 extends StatefulWidget {
-  const CartWidget2({super.key});
+  final VoidCallback updateTotal;
+  const CartWidget2({
+    super.key,
+    required this.updateTotal,
+  });
 
   @override
   State<CartWidget2> createState() => _CartWidget2State();
 }
 
 class _CartWidget2State extends State<CartWidget2> {
+  int cartCount = 0;
+  cartlength() {
+    if (Cart.length > 3) {
+      cartCount = 3;
+    } else {
+      cartCount = Cart.length;
+    }
+    return cartCount;
+  }
+
+  cartItemAdd(index) {
+    Cart[index]["Qty"] += 1;
+    widget.updateTotal();
+    setState(() {});
+  }
+
+  cartItemRemove(index) {
+    if (Cart[index]["Qty"] > 1) {
+      Cart[index]["Qty"] -= 1;
+    } else {
+      final productNameToRemove = Cart[index]["Name"];
+      final productListName = Cart[index]["Category"];
+      List productList = FindList(productListName);
+      final productIndex = productList
+          .indexWhere((product) => product["Name"] == productNameToRemove);
+      if (productIndex != -1) {
+        productList[productIndex]["InCart"] = false;
+        productList[productIndex]["Qty"] = 0;
+      }
+      Cart.remove(Cart[index]);
+    }
+    widget.updateTotal();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 3,
+      itemCount: cartlength(),
       itemBuilder: ((context, index) {
         return Column(
           children: [
@@ -33,7 +73,7 @@ class _CartWidget2State extends State<CartWidget2> {
                 ),
               ),
               subtitle: Text(
-                Cart[index]["Price"].toString(),
+                "\$${Cart[index]["Price"].toString()}",
                 style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
@@ -45,7 +85,9 @@ class _CartWidget2State extends State<CartWidget2> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        cartItemRemove(index);
+                      },
                       icon: const Icon(
                         Icons.remove_circle_outlined,
                         color: Color.fromARGB(255, 204, 204, 204),
@@ -59,7 +101,9 @@ class _CartWidget2State extends State<CartWidget2> {
                     ),
                   ),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        cartItemAdd(index);
+                      },
                       icon: const Icon(
                         Icons.add_circle_outlined,
                         color: Color.fromARGB(255, 204, 204, 204),

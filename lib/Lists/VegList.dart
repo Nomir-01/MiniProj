@@ -7,6 +7,7 @@ List Vegetables = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Vegetables",
   },
   {
     "Name": "Tomato",
@@ -16,6 +17,7 @@ List Vegetables = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Vegetables",
   },
   {
     "Name": "Onion",
@@ -25,5 +27,6 @@ List Vegetables = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Vegetables",
   },
 ];

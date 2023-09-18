@@ -26,12 +26,13 @@ class _CartWidget1State extends State<CartWidget1> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Transform.scale(
-                  scale: 1.8,
+                  scaleX: 4,
+                  scaleY: 3,
                   child: const Text(
                     "#",
                     style: TextStyle(
-                      height: 1,
-                      fontSize: 220,
+                      height: 1.3,
+                      fontSize: 150,
                       fontWeight: FontWeight.w400,
                       color: Color.fromARGB(255, 249, 176, 35),
                     ),
@@ -73,7 +74,7 @@ class _CartWidget1State extends State<CartWidget1> {
           color: const Color.fromARGB(255, 249, 176, 35),
           child: const Center(
             child: Text(
-              "Use code #HalalFood at Checkouut",
+              "Use code #HalalFood at Checkout",
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,

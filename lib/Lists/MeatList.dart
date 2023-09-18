@@ -7,6 +7,7 @@ List Meat = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Meat",
   },
   {
     "Name": "Goat Meat",
@@ -16,6 +17,7 @@ List Meat = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Meat",
   },
   {
     "Name": "Chicken Meat",
@@ -25,5 +27,6 @@ List Meat = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Meat",
   },
 ];

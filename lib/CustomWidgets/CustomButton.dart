@@ -7,6 +7,8 @@ class CustomButton extends StatefulWidget {
   final Color BoxColor;
   final Color TextColor;
   final Color BorderColor;
+  final double Size1;
+  final double Size2;
   final VoidCallback onPressed;
   const CustomButton({
     super.key,
@@ -15,6 +17,8 @@ class CustomButton extends StatefulWidget {
     required this.TextColor,
     required this.BorderColor,
     required this.onPressed,
+    required this.Size1,
+    required this.Size2,
   });
 
   @override
@@ -39,7 +43,7 @@ class _CustomButtonState extends State<CustomButton> {
       ),
       style: ElevatedButton.styleFrom(
         backgroundColor: widget.BoxColor,
-        fixedSize: Size(160, 50),
+        fixedSize: Size(widget.Size1, widget.Size2),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
           side: BorderSide(

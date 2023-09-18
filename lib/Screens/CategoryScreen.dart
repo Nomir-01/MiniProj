@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/CustomWidgets/CustomGridView.dart';
 import 'package:miniproj/CustomWidgets/CustomTopWidget.dart';
 
+import 'CartScreen.dart';
+
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
 
@@ -27,9 +29,26 @@ class _CategoryScreenState extends State<CategoryScreen> {
         actions: [
           Row(
             children: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.favorite)),
               IconButton(
-                  onPressed: () {}, icon: Image.asset("assets/images/bag.png")),
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.favorite,
+                    color: Color.fromARGB(255, 248, 249, 251),
+                  )),
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CartScreen(),
+                    ),
+                  );
+                },
+                icon: Icon(
+                  Icons.shopping_cart,
+                  color: Color.fromARGB(255, 248, 249, 251),
+                ),
+              ),
             ],
           )
         ],

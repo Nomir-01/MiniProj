@@ -7,6 +7,7 @@ List Snacks = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Snacks",
   },
   {
     "Name": "Juice",
@@ -16,6 +17,7 @@ List Snacks = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Snacks",
   },
   {
     "Name": "Chocolate",
@@ -25,5 +27,6 @@ List Snacks = [
     "IsFav": false,
     "InCart": false,
     "Image": Null,
+    "Category": "Snacks",
   },
 ];

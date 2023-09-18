@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Widgest/HomeWidget1.dart';
 import 'package:miniproj/Widgest/HomeWidget2.dart';
 
+import 'CartScreen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -27,9 +29,26 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           Row(
             children: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.favorite)),
               IconButton(
-                  onPressed: () {}, icon: Image.asset("assets/images/bag.png")),
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.favorite,
+                    color: Color.fromARGB(255, 248, 249, 251),
+                  )),
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CartScreen(),
+                    ),
+                  );
+                },
+                icon: Icon(
+                  Icons.shopping_cart,
+                  color: Color.fromARGB(255, 248, 249, 251),
+                ),
+              ),
             ],
           )
         ],

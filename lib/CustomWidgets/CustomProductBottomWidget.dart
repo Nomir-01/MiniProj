@@ -66,8 +66,27 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                   BoxColor: Color.fromARGB(255, 250, 251, 253),
                   TextColor: Color.fromARGB(255, 42, 75, 160),
                   BorderColor: Color.fromARGB(167, 217, 224, 240),
+                  Size1: 160,
+                  Size2: 50,
                   onPressed: () {
                     AddToCart();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        dismissDirection: DismissDirection.endToStart,
+                        duration: Duration(seconds: 5),
+                        content: Text(
+                          "Product Added To Cart",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 0.24,
+                            color: Color.fromARGB(255, 250, 251, 253),
+                          ),
+                        ),
+                        backgroundColor: Color.fromARGB(255, 42, 75, 160),
+                      ),
+                    );
                   },
                 ),
                 CustomButton(
@@ -75,6 +94,8 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                   BoxColor: Color.fromARGB(255, 42, 75, 160),
                   TextColor: Color.fromARGB(255, 250, 251, 253),
                   BorderColor: Color.fromARGB(255, 250, 251, 253),
+                  Size1: 160,
+                  Size2: 50,
                   onPressed: () {},
                 ),
               ],

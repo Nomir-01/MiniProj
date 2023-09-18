@@ -23,7 +23,7 @@ class _CustomSlidingTilesState extends State<CustomSlidingTiles> {
     return Container(
       margin: const EdgeInsets.fromLTRB(15, 20, 15, 0),
       height: MediaQuery.of(context).size.height * 0.15,
-      width: MediaQuery.of(context).size.width * 0.65,
+      width: MediaQuery.of(context).size.width * 0.7,
       decoration: BoxDecoration(
         color: widget.Tilecolor,
         borderRadius: BorderRadius.circular(20.0),
