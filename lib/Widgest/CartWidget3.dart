@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import '../CustomWidgets/CustomButton.dart';
+import '../Functions/FindTotalValue.dart';
 import '../Lists/Cart.dart';
 
 class CartWidget3 extends StatefulWidget {
@@ -13,23 +14,13 @@ class CartWidget3 extends StatefulWidget {
 }
 
 class _CartWidget3State extends State<CartWidget3> {
-  num total = 0;
-  totalValue() {
-    total = 0;
-    for (int i = 0; i < Cart.length; i++) {
-      total += Cart[i]["Qty"] * Cart[i]["Price"];
-    }
-    total += 50;
-    return total;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.15,
       width: MediaQuery.of(context).size.width * 1,
-      margin: EdgeInsets.only(left: 10, right: 10),
-      decoration: BoxDecoration(
+      margin: const EdgeInsets.only(left: 10, right: 10),
+      decoration: const BoxDecoration(
         color: Color.fromARGB(255, 204, 204, 204),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
@@ -55,7 +46,7 @@ class _CartWidget3State extends State<CartWidget3> {
                   ),
                 ),
                 Text(
-                  "\$${totalValue().toString()}",
+                  "\$${(totalValue() + 10).toString()}",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
@@ -70,8 +61,8 @@ class _CartWidget3State extends State<CartWidget3> {
             BoxColor: Color.fromARGB(255, 42, 75, 160),
             TextColor: Color.fromARGB(255, 250, 251, 253),
             BorderColor: Color.fromARGB(255, 204, 204, 204),
-            Size1: 200,
-            Size2: 50,
+            Size1: MediaQuery.of(context).size.width * 0.55,
+            Size2: MediaQuery.of(context).size.height * 0.065,
             onPressed: () {},
           ),
         ],

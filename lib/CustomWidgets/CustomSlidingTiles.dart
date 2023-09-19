@@ -29,10 +29,12 @@ class _CustomSlidingTilesState extends State<CustomSlidingTiles> {
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Container(
-            margin: const EdgeInsets.only(left: 10),
+            //margin: const EdgeInsets.only(left: 10),
+            margin:
+                EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.02),
             child: Image.asset(
               widget.Tileimage ?? "assets/images/Image Icon.png",
               height: 80,
@@ -42,7 +44,7 @@ class _CustomSlidingTilesState extends State<CustomSlidingTiles> {
           Container(
             margin: const EdgeInsets.only(right: 10),
             height: MediaQuery.of(context).size.height * 0.1,
-            width: MediaQuery.of(context).size.width * 0.35,
+            width: MediaQuery.of(context).size.width * 0.4,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,

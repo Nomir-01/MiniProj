@@ -5,6 +5,7 @@ import 'package:miniproj/CustomWidgets/CustomGridView.dart';
 import 'package:miniproj/CustomWidgets/CustomTopWidget.dart';
 
 import 'CartScreen.dart';
+import 'FavouriteScreen.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
@@ -30,10 +31,17 @@ class _CategoryScreenState extends State<CategoryScreen> {
           Row(
             children: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FavouriteScreen(),
+                      ),
+                    );
+                  },
                   icon: Icon(
                     Icons.favorite,
-                    color: Color.fromARGB(255, 248, 249, 251),
+                    color: Color.fromARGB(255, 145, 1, 20),
                   )),
               IconButton(
                 onPressed: () {
@@ -46,7 +54,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 },
                 icon: Icon(
                   Icons.shopping_cart,
-                  color: Color.fromARGB(255, 248, 249, 251),
+                  color: Color.fromARGB(255, 255, 200, 58),
                 ),
               ),
             ],

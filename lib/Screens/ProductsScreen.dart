@@ -12,6 +12,7 @@ import 'package:miniproj/Lists/VegList.dart';
 import '../CustomWidgets/CustomGridView.dart';
 import '../CustomWidgets/CustomTopWidget.dart';
 import 'CartScreen.dart';
+import 'FavouriteScreen.dart';
 
 class ProductScreen extends StatefulWidget {
   final String ProductName;
@@ -59,10 +60,17 @@ class _ProductScreenState extends State<ProductScreen> {
           Row(
             children: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FavouriteScreen(),
+                      ),
+                    );
+                  },
                   icon: Icon(
                     Icons.favorite,
-                    color: Color.fromARGB(255, 248, 249, 251),
+                    color: Color.fromARGB(255, 145, 1, 20),
                   )),
               IconButton(
                 onPressed: () {
@@ -75,7 +83,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 },
                 icon: Icon(
                   Icons.shopping_cart,
-                  color: Color.fromARGB(255, 248, 249, 251),
+                  color: Color.fromARGB(255, 255, 200, 58),
                 ),
               ),
             ],

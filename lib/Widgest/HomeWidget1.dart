@@ -55,7 +55,7 @@ class _HomeWidget1State extends State<HomeWidget1> {
             height: MediaQuery.of(context).size.height * 0.08,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width * 0.5,
@@ -76,7 +76,7 @@ class _HomeWidget1State extends State<HomeWidget1> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Green Way 3000, Sylhet",
+                          const Text("Green Way 3000, Sylhet",
                               style: TextStyle(
                                 fontSize: 14,
                                 letterSpacing: 0.22,
@@ -85,7 +85,7 @@ class _HomeWidget1State extends State<HomeWidget1> {
                               )),
                           Image.asset(
                             "assets/images/arrow Iocn.png",
-                            color: Color.fromARGB(255, 248, 249, 251),
+                            color: const Color.fromARGB(255, 248, 249, 251),
                           )
                         ],
                       )
@@ -111,7 +111,7 @@ class _HomeWidget1State extends State<HomeWidget1> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("1 Hour",
+                          const Text("1 Hour",
                               style: TextStyle(
                                 fontSize: 14,
                                 letterSpacing: 0.22,
@@ -120,7 +120,7 @@ class _HomeWidget1State extends State<HomeWidget1> {
                               )),
                           Image.asset(
                             "assets/images/arrow Iocn.png",
-                            color: Color.fromARGB(255, 248, 249, 251),
+                            color: const Color.fromARGB(255, 248, 249, 251),
                           )
                         ],
                       )

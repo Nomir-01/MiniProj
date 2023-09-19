@@ -5,6 +5,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/CustomWidgets/CustomButton.dart';
 import 'package:miniproj/Lists/Cart.dart';
 
+import '../Functions/AddToCart.dart';
+
 class CustomProductBottomWidget extends StatefulWidget {
   final String Details;
   final List ProductList;
@@ -22,23 +24,22 @@ class CustomProductBottomWidget extends StatefulWidget {
 }
 
 class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
-  void AddToCart() {
-    if (widget.ProductList[widget.Index]["InCart"] == false) {
-      widget.ProductList[widget.Index]["InCart"] = true;
-      widget.ProductList[widget.Index]["Qty"] += 1;
-      Cart.add(widget.ProductList[widget.Index]);
-    } else {
-      final int indexInCart = Cart.indexWhere(
-        (product) =>
-            product["Name"] == widget.ProductList[widget.Index]["Name"],
-      );
-      if (indexInCart != -1) {
-        Cart[indexInCart]["Qty"] += 1;
-      } else {
-        print("Error: Product not found in cart.");
-      }
-    }
-  }
+  // AddToCart(List Product, int Index) {
+  //   if (Product[Index]["InCart"] == false) {
+  //     Product[Index]["InCart"] = true;
+  //     Product[Index]["Qty"] += 1;
+  //     Cart.add(Product[Index]);
+  //   } else {
+  //     final int indexInCart = Cart.indexWhere(
+  //       (product) => product["Name"] == Product[Index]["Name"],
+  //     );
+  //     if (indexInCart != -1) {
+  //       Cart[indexInCart]["Qty"] += 1;
+  //     } else {
+  //       print("Error: Product not found in cart.");
+  //     }
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -66,14 +67,14 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                   BoxColor: Color.fromARGB(255, 250, 251, 253),
                   TextColor: Color.fromARGB(255, 42, 75, 160),
                   BorderColor: Color.fromARGB(167, 217, 224, 240),
-                  Size1: 160,
-                  Size2: 50,
+                  Size1: MediaQuery.of(context).size.width * 0.4,
+                  Size2: MediaQuery.of(context).size.height * 0.065,
                   onPressed: () {
-                    AddToCart();
+                    AddToCart(widget.ProductList, widget.Index);
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         dismissDirection: DismissDirection.endToStart,
-                        duration: Duration(seconds: 5),
+                        duration: Duration(seconds: 2),
                         content: Text(
                           "Product Added To Cart",
                           textAlign: TextAlign.center,
@@ -84,7 +85,7 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                             color: Color.fromARGB(255, 250, 251, 253),
                           ),
                         ),
-                        backgroundColor: Color.fromARGB(255, 42, 75, 160),
+                        backgroundColor: Color.fromARGB(255, 255, 200, 58),
                       ),
                     );
                   },
@@ -94,8 +95,8 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                   BoxColor: Color.fromARGB(255, 42, 75, 160),
                   TextColor: Color.fromARGB(255, 250, 251, 253),
                   BorderColor: Color.fromARGB(255, 250, 251, 253),
-                  Size1: 160,
-                  Size2: 50,
+                  Size1: MediaQuery.of(context).size.width * 0.4,
+                  Size2: MediaQuery.of(context).size.height * 0.065,
                   onPressed: () {},
                 ),
               ],

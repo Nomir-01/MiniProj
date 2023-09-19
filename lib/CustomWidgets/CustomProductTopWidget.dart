@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:miniproj/Lists/Favs.dart';
 
 class CustomProductTopWidget extends StatefulWidget {
   final String Title1;
   final String Title2;
   final int Price;
+  final VoidCallback onPressed1;
+  final VoidCallback onPressed2;
+  final Color favColor;
   const CustomProductTopWidget({
     super.key,
     required this.Title1,
     required this.Title2,
     required this.Price,
+    required this.onPressed1,
+    required this.onPressed2,
+    required this.favColor,
   });
 
   @override
@@ -79,12 +86,33 @@ class _CustomProductTopWidgetState extends State<CustomProductTopWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          widget.onPressed1();
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              dismissDirection: DismissDirection.endToStart,
+                              duration: Duration(seconds: 2),
+                              content: Text(
+                                "Favourites Were Changed",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 0.24,
+                                  color: Color.fromARGB(255, 250, 251, 253),
+                                ),
+                              ),
+                              backgroundColor: Color.fromARGB(255, 145, 1, 20),
+                            ),
+                          );
+                        },
                         icon: Icon(Icons.favorite),
-                        color: Color.fromARGB(255, 30, 34, 43),
+                        color: widget.favColor,
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          widget.onPressed2();
+                        },
                         icon: Icon(Icons.more_vert),
                         color: Color.fromARGB(255, 30, 34, 43),
                       ),

@@ -6,7 +6,6 @@ import 'package:miniproj/Screens/SingleProductScreen.dart';
 
 class CustomProductGrid extends StatefulWidget {
   final List Product;
-
   final String SubHeading;
   const CustomProductGrid({
     super.key,

@@ -26,13 +26,13 @@ class _CartWidget1State extends State<CartWidget1> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Transform.scale(
-                  scaleX: 4,
-                  scaleY: 3,
+                  scaleX: 7,
+                  scaleY: 5,
                   child: const Text(
                     "#",
                     style: TextStyle(
-                      height: 1.3,
-                      fontSize: 150,
+                      height: 1.35,
+                      fontSize: 100,
                       fontWeight: FontWeight.w400,
                       color: Color.fromARGB(255, 249, 176, 35),
                     ),
