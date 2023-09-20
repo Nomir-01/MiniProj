@@ -7,7 +7,11 @@ import '../Functions/FindTotalValue.dart';
 import '../Lists/Cart.dart';
 
 class CartWidget3 extends StatefulWidget {
-  const CartWidget3({super.key});
+  final VoidCallback onPressed;
+  const CartWidget3({
+    super.key,
+    required this.onPressed,
+  });
 
   @override
   State<CartWidget3> createState() => _CartWidget3State();
@@ -63,7 +67,9 @@ class _CartWidget3State extends State<CartWidget3> {
             BorderColor: Color.fromARGB(255, 204, 204, 204),
             Size1: MediaQuery.of(context).size.width * 0.55,
             Size2: MediaQuery.of(context).size.height * 0.065,
-            onPressed: () {},
+            onPressed: () {
+              widget.onPressed();
+            },
           ),
         ],
       ),

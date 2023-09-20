@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/CustomWidgets/CustomButton.dart';
 import 'package:miniproj/Lists/Cart.dart';
+import 'package:miniproj/Screens/CheckOutScreen.dart';
 import 'package:miniproj/Screens/CompleteCartScreen.dart';
 import 'package:miniproj/Widgest/CartWidget1.dart';
 import 'package:miniproj/Widgest/CartWidget2.dart';
@@ -48,18 +49,19 @@ class _CartScreenState extends State<CartScreen> {
         ),
         actions: [
           IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => FavouriteScreen(),
-                  ),
-                );
-              },
-              icon: const Icon(
-                Icons.favorite,
-                color: Color.fromARGB(255, 145, 1, 20),
-              ))
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FavouriteScreen(),
+                ),
+              );
+            },
+            icon: const Icon(
+              Icons.favorite,
+              color: Color.fromARGB(255, 145, 1, 20),
+            ),
+          )
         ],
       ),
       body: Cart.isEmpty
@@ -131,7 +133,16 @@ class _CartScreenState extends State<CartScreen> {
                     ),
                   ),
                 ),
-                CartWidget3(),
+                CartWidget3(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CheckOutScreen(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
     );

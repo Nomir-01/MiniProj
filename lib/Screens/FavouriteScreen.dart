@@ -46,7 +46,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
             },
             icon: const Icon(
               Icons.shopping_cart,
-              color: Color.fromARGB(255, 248, 249, 251),
+              color: Color.fromARGB(255, 255, 200, 58),
             ),
           )
         ],

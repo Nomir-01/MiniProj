@@ -6,7 +6,13 @@ import '../CustomWidgets/CustomButton.dart';
 import '../Functions/FindTotalValue.dart';
 
 class CompleteCartWidget1 extends StatefulWidget {
-  const CompleteCartWidget1({super.key});
+  final String ButtonText;
+  final VoidCallback OnPressed;
+  const CompleteCartWidget1({
+    super.key,
+    required this.ButtonText,
+    required this.OnPressed,
+  });
 
   @override
   State<CompleteCartWidget1> createState() => _CompleteCartWidget1State();
@@ -108,13 +114,15 @@ class _CompleteCartWidget1State extends State<CompleteCartWidget1> {
             ),
           ),
           CustomButton(
-            ButtonText: "Proceed To Check Out",
+            ButtonText: widget.ButtonText,
             BoxColor: Color.fromARGB(255, 42, 75, 160),
             TextColor: Color.fromARGB(255, 250, 251, 253),
             BorderColor: Color.fromARGB(255, 204, 204, 204),
             Size1: MediaQuery.of(context).size.width * 0.55,
             Size2: MediaQuery.of(context).size.height * 0.065,
-            onPressed: () {},
+            onPressed: () {
+              widget.OnPressed();
+            },
           ),
         ],
       ),

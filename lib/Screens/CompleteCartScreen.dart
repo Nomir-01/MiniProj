@@ -7,6 +7,7 @@ import '../Functions/FindTotalValue.dart';
 import '../Lists/Cart.dart';
 import '../Widgest/CartWidget2.dart';
 import '../Widgest/CartWidget3.dart';
+import 'CheckOutScreen.dart';
 import 'FavouriteScreen.dart';
 
 class CompleteCartScreen extends StatefulWidget {
@@ -88,7 +89,17 @@ class _CompleteCartScreenState extends State<CompleteCartScreen> {
                     },
                   ),
                 ),
-                CompleteCartWidget1(),
+                CompleteCartWidget1(
+                  ButtonText: 'Proceed To Check Out',
+                  OnPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CheckOutScreen(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
     );
