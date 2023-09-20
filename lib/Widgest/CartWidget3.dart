@@ -1,10 +1,9 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import '../CustomWidgets/CustomButton.dart';
 import '../Functions/FindTotalValue.dart';
-import '../Lists/Cart.dart';
 
 class CartWidget3 extends StatefulWidget {
   final VoidCallback onPressed;
@@ -37,11 +36,11 @@ class _CartWidget3State extends State<CartWidget3> {
           Container(
             height: MediaQuery.of(context).size.width * 0.1,
             width: MediaQuery.of(context).size.width * 1,
-            margin: EdgeInsets.only(left: 10, right: 10),
+            margin: const EdgeInsets.only(left: 10, right: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Total",
                   style: TextStyle(
                     fontSize: 14,
@@ -51,7 +50,7 @@ class _CartWidget3State extends State<CartWidget3> {
                 ),
                 Text(
                   "\$${(totalValue() + 10).toString()}",
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: Color.fromARGB(255, 30, 34, 43),
@@ -62,9 +61,9 @@ class _CartWidget3State extends State<CartWidget3> {
           ),
           CustomButton(
             ButtonText: "Proceed To Check Out",
-            BoxColor: Color.fromARGB(255, 42, 75, 160),
-            TextColor: Color.fromARGB(255, 250, 251, 253),
-            BorderColor: Color.fromARGB(255, 204, 204, 204),
+            BoxColor: const Color.fromARGB(255, 42, 75, 160),
+            TextColor: const Color.fromARGB(255, 250, 251, 253),
+            BorderColor: const Color.fromARGB(255, 204, 204, 204),
             Size1: MediaQuery.of(context).size.width * 0.55,
             Size2: MediaQuery.of(context).size.height * 0.065,
             onPressed: () {

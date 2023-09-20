@@ -1,6 +1,6 @@
+// ignore_for_file: non_constant_identifier_names, file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CustomButton extends StatefulWidget {
   final String ButtonText;
@@ -32,15 +32,6 @@ class _CustomButtonState extends State<CustomButton> {
       onPressed: () {
         widget.onPressed();
       },
-      child: Center(
-        child: Text(
-          widget.ButtonText,
-          style: TextStyle(
-            fontSize: 16,
-            color: widget.TextColor,
-          ),
-        ),
-      ),
       style: ElevatedButton.styleFrom(
         backgroundColor: widget.BoxColor,
         fixedSize: Size(widget.Size1, widget.Size2),
@@ -49,6 +40,15 @@ class _CustomButtonState extends State<CustomButton> {
           side: BorderSide(
             color: widget.BorderColor,
             width: 2,
+          ),
+        ),
+      ),
+      child: Center(
+        child: Text(
+          widget.ButtonText,
+          style: TextStyle(
+            fontSize: 16,
+            color: widget.TextColor,
           ),
         ),
       ),

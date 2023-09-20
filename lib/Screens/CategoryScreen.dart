@@ -1,6 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/CustomWidgets/CustomGridView.dart';
 import 'package:miniproj/CustomWidgets/CustomTopWidget.dart';
 
@@ -35,11 +35,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FavouriteScreen(),
+                        builder: (context) => const FavouriteScreen(),
                       ),
                     );
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.favorite,
                     color: Color.fromARGB(255, 145, 1, 20),
                   )),
@@ -48,11 +48,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => CartScreen(),
+                      builder: (context) => const CartScreen(),
                     ),
                   );
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.shopping_cart,
                   color: Color.fromARGB(255, 255, 200, 58),
                 ),
@@ -62,7 +62,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
         ],
       ),
       body: Column(
-        children: [
+        children: const [
           CustomTopWidget(
             Title1: "Shop",
             Title2: "By Category",

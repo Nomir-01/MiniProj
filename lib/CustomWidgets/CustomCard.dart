@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: file_names, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CustomCard extends StatefulWidget {
   final String Title;
@@ -22,10 +21,10 @@ class _CustomCardState extends State<CustomCard> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            margin: EdgeInsets.fromLTRB(10, 5, 0, 0),
+            margin: const EdgeInsets.fromLTRB(10, 5, 0, 0),
             child: Text(
               widget.Title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: Color.fromARGB(255, 30, 34, 43),
@@ -45,14 +44,14 @@ class _CustomCardState extends State<CustomCard> {
               ),
             ),
             child: Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: TextField(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color.fromARGB(255, 30, 34, 43),
                 ),
                 decoration: InputDecoration(
                   hintText: widget.Subtitle,
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     color: Color.fromARGB(255, 136, 145, 165),
                   ),
                   border: InputBorder.none,

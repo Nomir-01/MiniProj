@@ -1,6 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Lists/Favs.dart';
 import 'package:miniproj/Widgest/FavWidget1.dart';
 
@@ -15,6 +15,7 @@ class FavouriteScreen extends StatefulWidget {
 
 class _FavouriteScreenState extends State<FavouriteScreen> {
   @override
+  // ignore: must_call_super
   void initState() {
     setState(() {});
   }
@@ -40,7 +41,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CartScreen(),
+                  builder: (context) => const CartScreen(),
                 ),
               );
             },

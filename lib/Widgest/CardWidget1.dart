@@ -1,6 +1,6 @@
+// ignore_for_file: file_names, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/CustomWidgets/CustomCard.dart';
 import 'package:miniproj/CustomWidgets/CustomCard2.dart';
 
@@ -18,22 +18,22 @@ class _CardWidget1State extends State<CardWidget1> {
     return Container(
       width: MediaQuery.of(context).size.width * 1,
       height: MediaQuery.of(context).size.height * 0.45,
-      margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+      margin: const EdgeInsets.fromLTRB(15, 10, 15, 0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomCard(
+          const CustomCard(
             Title: 'Card Holder Name',
             Subtitle: 'e.g. Muhammad Nomir',
           ),
-          CustomCard(
+          const CustomCard(
             Title: "Card Number",
             Subtitle: "xxxx xxxx xxxx xxxx",
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [
+            children: const [
               CustomCard2(
                 Title: "Exp Date",
                 Subtitle: "xx/xx",

@@ -1,6 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Widgest/HomeWidget1.dart';
 import 'package:miniproj/Widgest/HomeWidget2.dart';
 
@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 42, 75, 160),
         title: const Text(
           "Hey, Halal",
@@ -35,11 +36,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FavouriteScreen(),
+                        builder: (context) => const FavouriteScreen(),
                       ),
                     );
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.favorite,
                     color: Color.fromARGB(255, 145, 1, 20),
                   )),
@@ -48,11 +49,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => CartScreen(),
+                      builder: (context) => const CartScreen(),
                     ),
                   );
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.shopping_cart,
                   color: Color.fromARGB(255, 255, 200, 58),
                 ),
@@ -62,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: Column(
-        children: [
+        children: const [
           HomeWidget1(),
           Expanded(
             child: SingleChildScrollView(

@@ -1,12 +1,11 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Widgest/CompleteCartWidget1.dart';
 
 import '../Functions/FindTotalValue.dart';
 import '../Lists/Cart.dart';
 import '../Widgest/CartWidget2.dart';
-import '../Widgest/CartWidget3.dart';
 import 'CheckOutScreen.dart';
 import 'FavouriteScreen.dart';
 
@@ -39,12 +38,12 @@ class _CompleteCartScreenState extends State<CompleteCartScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FavouriteScreen(),
+                  builder: (context) => const FavouriteScreen(),
                 ),
               );
             },
             icon: const Icon(Icons.favorite),
-            color: Color.fromARGB(255, 145, 1, 20),
+            color: const Color.fromARGB(255, 145, 1, 20),
           )
         ],
       ),
@@ -54,7 +53,7 @@ class _CompleteCartScreenState extends State<CompleteCartScreen> {
                 Container(
                   width: MediaQuery.of(context).size.width * 1,
                   height: MediaQuery.of(context).size.height * 0.8,
-                  color: Color.fromARGB(255, 250, 251, 253),
+                  color: const Color.fromARGB(255, 250, 251, 253),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
@@ -95,7 +94,7 @@ class _CompleteCartScreenState extends State<CompleteCartScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => CheckOutScreen(),
+                        builder: (context) => const CheckOutScreen(),
                       ),
                     );
                   },

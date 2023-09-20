@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: non_constant_identifier_names, file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Screens/SingleProductScreen.dart';
 
 class CustomProductGrid extends StatefulWidget {
@@ -57,14 +56,14 @@ class _CustomProductGridState extends State<CustomProductGrid> {
                     "assets/images/Image Icon.png",
                     height: 80,
                     width: 80,
-                    color: Color.fromARGB(255, 178, 187, 206),
+                    color: const Color.fromARGB(255, 178, 187, 206),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Text(
                     widget.Product[index]["Name"].toString(),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       color: Color.fromARGB(255, 30, 34, 43),
                       fontWeight: FontWeight.w500,
@@ -75,7 +74,7 @@ class _CustomProductGridState extends State<CustomProductGrid> {
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Text(
                     "\$${widget.Product[index]["Price"].toString()}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       color: Color.fromARGB(255, 30, 34, 43),
                       fontWeight: FontWeight.w500,
@@ -85,7 +84,7 @@ class _CustomProductGridState extends State<CustomProductGrid> {
                 Center(
                   child: Text(
                     widget.Product[index]["Desc"],
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
                       letterSpacing: 0.24,

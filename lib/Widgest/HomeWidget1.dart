@@ -1,5 +1,5 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class HomeWidget1 extends StatefulWidget {
@@ -57,7 +57,7 @@ class _HomeWidget1State extends State<HomeWidget1> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 0.5,
                   height: MediaQuery.of(context).size.height * 0.1,
                   child: Column(
@@ -92,7 +92,7 @@ class _HomeWidget1State extends State<HomeWidget1> {
                     ],
                   ),
                 ),
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 0.2,
                   height: MediaQuery.of(context).size.height * 0.1,
                   child: Column(

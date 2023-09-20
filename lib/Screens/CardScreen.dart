@@ -1,8 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Widgest/CardWidget1.dart';
-import 'package:miniproj/Widgest/CheckoutWidget1.dart';
 import 'package:miniproj/Widgest/CompleteCartWidget1.dart';
 
 import 'ConfirmedScreen.dart';
@@ -23,9 +22,9 @@ class _CardScreenState extends State<CardScreen> {
           color: Color.fromARGB(255, 30, 34, 43),
         ),
         backgroundColor: const Color.fromARGB(255, 255, 200, 58),
-        title: Text(
+        title: const Text(
           "Add Card",
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.w500,
             color: Color.fromARGB(255, 30, 34, 43),
@@ -34,17 +33,17 @@ class _CardScreenState extends State<CardScreen> {
       ),
       body: Column(
         children: [
-          CardWidget1(),
+          const CardWidget1(),
           Expanded(
             child: Align(
               alignment: Alignment.bottomCenter,
               child: CompleteCartWidget1(
                   ButtonText: "Confirm Payment",
                   OnPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ConfirmedScreen()));
+                            builder: (context) => const ConfirmedScreen()));
                   }),
             ),
           )

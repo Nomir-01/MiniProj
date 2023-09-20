@@ -1,10 +1,9 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Lists/Payment.dart';
 import 'package:miniproj/Screens/CardScreen.dart';
 import 'package:miniproj/Screens/ConfirmedScreen.dart';
-import 'package:miniproj/Widgest/CartWidget3.dart';
 import 'package:miniproj/Widgest/CheckoutWidget1.dart';
 import 'package:miniproj/Widgest/CompleteCartWidget1.dart';
 
@@ -42,7 +41,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FavouriteScreen(),
+                  builder: (context) => const FavouriteScreen(),
                 ),
               );
             },
@@ -55,23 +54,25 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
       ),
       body: Column(
         children: [
-          CheckOutWidget1(),
-          CheckOutWidget2(),
+          const CheckOutWidget1(),
+          const CheckOutWidget2(),
           Expanded(
             child: Align(
               alignment: Alignment.bottomCenter,
               child: CompleteCartWidget1(
                 ButtonText: 'Confirm Order',
                 OnPressed: () {
-                  selectedMethod[0]["Method"] == "Option 1"
-                      ? Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ConfirmedScreen()))
-                      : Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CardScreen()));
+                  if (selectedMethod[0]["Method"] == "Option 1") {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ConfirmedScreen()));
+                  } else {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CardScreen()));
+                  }
                 },
               ),
             ),

@@ -1,5 +1,8 @@
+// ignore_for_file: file_names
+
 import '../Lists/Cart.dart';
 
+// ignore: non_constant_identifier_names
 AddToCart(List Product, int Index) {
   if (Product[Index]["InCart"] == false) {
     Product[Index]["InCart"] = true;
@@ -11,8 +14,6 @@ AddToCart(List Product, int Index) {
     );
     if (indexInCart != -1) {
       Cart[indexInCart]["Qty"] += 1;
-    } else {
-      print("Error: Product not found in cart.");
-    }
+    } else {}
   }
 }

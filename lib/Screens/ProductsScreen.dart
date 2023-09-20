@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: file_names, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/CustomWidgets/CustomProductGrid.dart';
 import 'package:miniproj/Lists/FIshList.dart';
 import 'package:miniproj/Lists/FruitList.dart';
@@ -9,7 +8,6 @@ import 'package:miniproj/Lists/MeatList.dart';
 import 'package:miniproj/Lists/SnacksList.dart';
 import 'package:miniproj/Lists/VegList.dart';
 
-import '../CustomWidgets/CustomGridView.dart';
 import '../CustomWidgets/CustomTopWidget.dart';
 import 'CartScreen.dart';
 import 'FavouriteScreen.dart';
@@ -64,11 +62,11 @@ class _ProductScreenState extends State<ProductScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FavouriteScreen(),
+                        builder: (context) => const FavouriteScreen(),
                       ),
                     );
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.favorite,
                     color: Color.fromARGB(255, 145, 1, 20),
                   )),
@@ -77,11 +75,11 @@ class _ProductScreenState extends State<ProductScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => CartScreen(),
+                      builder: (context) => const CartScreen(),
                     ),
                   );
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.shopping_cart,
                   color: Color.fromARGB(255, 255, 200, 58),
                 ),

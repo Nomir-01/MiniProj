@@ -1,6 +1,6 @@
+// ignore_for_file: non_constant_identifier_names, file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CheckOutWidget1 extends StatefulWidget {
   const CheckOutWidget1({super.key});
@@ -12,6 +12,7 @@ class CheckOutWidget1 extends StatefulWidget {
 class _ChekOoutWidget1State extends State<CheckOutWidget1> {
   TextEditingController AddressController = TextEditingController();
   @override
+  // ignore: must_call_super
   void initState() {
     AddressController.text = "Green Way 3000, Sylhet";
   }
@@ -21,14 +22,14 @@ class _ChekOoutWidget1State extends State<CheckOutWidget1> {
     return Container(
       width: MediaQuery.of(context).size.width * 1,
       height: MediaQuery.of(context).size.height * 0.15,
-      margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+      margin: const EdgeInsets.fromLTRB(15, 10, 15, 0),
       // color: Colors.brown,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.fromLTRB(10, 5, 0, 0),
+            margin: const EdgeInsets.fromLTRB(10, 5, 0, 0),
             child: const Text(
               "Delivery Address",
               style: TextStyle(
@@ -55,10 +56,10 @@ class _ChekOoutWidget1State extends State<CheckOutWidget1> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Text(
                       AddressController.text,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
                         color: Color.fromARGB(255, 30, 34, 43),
@@ -72,7 +73,7 @@ class _ChekOoutWidget1State extends State<CheckOutWidget1> {
                         showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
-                            title: Text("Edit"),
+                            title: const Text("Edit"),
                             content: TextField(
                               controller: AddressController,
                             ),
@@ -82,12 +83,12 @@ class _ChekOoutWidget1State extends State<CheckOutWidget1> {
                                     Navigator.of(context).pop();
                                     setState(() {});
                                   },
-                                  child: Text("Done"))
+                                  child: const Text("Done"))
                             ],
                           ),
                         );
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.edit,
                         color: Color.fromARGB(255, 30, 34, 43),
                       ),

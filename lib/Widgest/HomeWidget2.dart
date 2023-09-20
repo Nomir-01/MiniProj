@@ -1,7 +1,6 @@
-import 'package:flutter/foundation.dart';
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/CustomWidgets/CustomCategoriesTile.dart';
 import 'package:miniproj/CustomWidgets/CustomProductTile.dart';
 import 'package:miniproj/CustomWidgets/CustomSlidingTiles.dart';
@@ -87,7 +86,7 @@ class _HomeWidget2State extends State<HomeWidget2> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => CategoryScreen(),
+                          builder: (context) => const CategoryScreen(),
                         ),
                       );
                     },
@@ -114,7 +113,7 @@ class _HomeWidget2State extends State<HomeWidget2> {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
-            children: [
+            children: const [
               CustomProductTile(
                 Price: "500",
                 Desc: "Orange Package 1 | 1 bundle",

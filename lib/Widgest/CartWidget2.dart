@@ -1,6 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Functions/FindListFunc.dart';
 
 import '../Lists/Cart.dart';
@@ -62,7 +62,7 @@ class _CartWidget2State extends State<CartWidget2> {
             ListTile(
               leading: Image.asset(
                 "assets/images/Image Icon2.png",
-                color: Color.fromARGB(255, 30, 34, 43),
+                color: const Color.fromARGB(255, 30, 34, 43),
               ),
               title: Text(
                 Cart[index]["Name"],

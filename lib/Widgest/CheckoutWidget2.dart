@@ -1,6 +1,6 @@
+// ignore_for_file: non_constant_identifier_names, file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Lists/Payment.dart';
 
 class CheckOutWidget2 extends StatefulWidget {
@@ -13,8 +13,11 @@ class CheckOutWidget2 extends StatefulWidget {
 class _CheckOutWidget2State extends State<CheckOutWidget2> {
   String? SelectedValue;
   @override
+  // ignore: must_call_super
   void initState() {
+    selectedMethod[0]["Method"] = "Option 1";
     SelectedValue = "Option 1";
+    setState(() {});
   }
 
   @override
@@ -22,13 +25,13 @@ class _CheckOutWidget2State extends State<CheckOutWidget2> {
     return Container(
       width: MediaQuery.of(context).size.width * 1,
       height: MediaQuery.of(context).size.height * 0.2,
-      margin: EdgeInsets.fromLTRB(15, 10, 15, 0),
+      margin: const EdgeInsets.fromLTRB(15, 10, 15, 0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.fromLTRB(10, 5, 0, 0),
+            margin: const EdgeInsets.fromLTRB(10, 5, 0, 0),
             child: const Text(
               "Payment Method",
               style: TextStyle(
@@ -56,7 +59,7 @@ class _CheckOutWidget2State extends State<CheckOutWidget2> {
                 Row(
                   children: [
                     Radio(
-                      activeColor: Color.fromARGB(255, 42, 75, 160),
+                      activeColor: const Color.fromARGB(255, 42, 75, 160),
                       value: "Option 1",
                       groupValue: SelectedValue,
                       onChanged: (value) {
@@ -79,7 +82,7 @@ class _CheckOutWidget2State extends State<CheckOutWidget2> {
                 Row(
                   children: [
                     Radio(
-                      activeColor: Color.fromARGB(255, 42, 75, 160),
+                      activeColor: const Color.fromARGB(255, 42, 75, 160),
                       value: "Option 2",
                       groupValue: SelectedValue,
                       onChanged: (value) {

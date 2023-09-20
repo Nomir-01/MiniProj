@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: file_names, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/CustomWidgets/CustomButton.dart';
-import 'package:miniproj/Lists/Cart.dart';
 
 import '../Functions/AddToCart.dart';
 
@@ -64,9 +62,9 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
               children: [
                 CustomButton(
                   ButtonText: "Add To Cart",
-                  BoxColor: Color.fromARGB(255, 250, 251, 253),
-                  TextColor: Color.fromARGB(255, 42, 75, 160),
-                  BorderColor: Color.fromARGB(167, 217, 224, 240),
+                  BoxColor: const Color.fromARGB(255, 250, 251, 253),
+                  TextColor: const Color.fromARGB(255, 42, 75, 160),
+                  BorderColor: const Color.fromARGB(167, 217, 224, 240),
                   Size1: MediaQuery.of(context).size.width * 0.4,
                   Size2: MediaQuery.of(context).size.height * 0.065,
                   onPressed: () {
@@ -92,9 +90,9 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                 ),
                 CustomButton(
                   ButtonText: "Buy Now",
-                  BoxColor: Color.fromARGB(255, 42, 75, 160),
-                  TextColor: Color.fromARGB(255, 250, 251, 253),
-                  BorderColor: Color.fromARGB(255, 250, 251, 253),
+                  BoxColor: const Color.fromARGB(255, 42, 75, 160),
+                  TextColor: const Color.fromARGB(255, 250, 251, 253),
+                  BorderColor: const Color.fromARGB(255, 250, 251, 253),
                   Size1: MediaQuery.of(context).size.width * 0.4,
                   Size2: MediaQuery.of(context).size.height * 0.065,
                   onPressed: () {},

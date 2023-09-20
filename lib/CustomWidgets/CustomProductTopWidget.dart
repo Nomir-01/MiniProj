@@ -1,7 +1,6 @@
+// ignore_for_file: non_constant_identifier_names, file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:miniproj/Lists/Favs.dart';
 
 class CustomProductTopWidget extends StatefulWidget {
   final String Title1;
@@ -106,15 +105,15 @@ class _CustomProductTopWidgetState extends State<CustomProductTopWidget> {
                             ),
                           );
                         },
-                        icon: Icon(Icons.favorite),
+                        icon: const Icon(Icons.favorite),
                         color: widget.favColor,
                       ),
                       IconButton(
                         onPressed: () {
                           widget.onPressed2();
                         },
-                        icon: Icon(Icons.more_vert),
-                        color: Color.fromARGB(255, 30, 34, 43),
+                        icon: const Icon(Icons.more_vert),
+                        color: const Color.fromARGB(255, 30, 34, 43),
                       ),
                     ],
                   ),

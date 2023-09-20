@@ -1,9 +1,6 @@
-import 'dart:ui';
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:miniproj/CustomWidgets/CustomButton.dart';
 import 'package:miniproj/Lists/Cart.dart';
 import 'package:miniproj/Screens/CheckOutScreen.dart';
 import 'package:miniproj/Screens/CompleteCartScreen.dart';
@@ -53,7 +50,7 @@ class _CartScreenState extends State<CartScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FavouriteScreen(),
+                  builder: (context) => const FavouriteScreen(),
                 ),
               );
             },
@@ -67,11 +64,11 @@ class _CartScreenState extends State<CartScreen> {
       body: Cart.isEmpty
           ? Column(
               children: [
-                CartWidget1(),
+                const CartWidget1(),
                 Container(
                   width: MediaQuery.of(context).size.width * 1,
                   height: MediaQuery.of(context).size.height * 0.4,
-                  color: Color.fromARGB(255, 250, 251, 253),
+                  color: const Color.fromARGB(255, 250, 251, 253),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
@@ -98,7 +95,7 @@ class _CartScreenState extends State<CartScreen> {
             )
           : Column(
               children: [
-                CartWidget1(),
+                const CartWidget1(),
                 Expanded(
                   child: CartWidget2(
                     updateTotal: () {
@@ -118,7 +115,7 @@ class _CartScreenState extends State<CartScreen> {
                       await Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => CompleteCartScreen(),
+                          builder: (context) => const CompleteCartScreen(),
                         ),
                       );
                       setState(() {});
@@ -138,7 +135,7 @@ class _CartScreenState extends State<CartScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => CheckOutScreen(),
+                        builder: (context) => const CheckOutScreen(),
                       ),
                     );
                   },

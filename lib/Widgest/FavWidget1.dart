@@ -1,6 +1,6 @@
+// ignore_for_file: non_constant_identifier_names, file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniproj/Functions/AddFav.dart';
 import 'package:miniproj/Functions/AddToCart.dart';
 import 'package:miniproj/Lists/Favs.dart';
@@ -48,7 +48,7 @@ class _FavWidget1State extends State<FavWidget1> {
             ListTile(
               leading: Image.asset(
                 "assets/images/Image Icon2.png",
-                color: Color.fromARGB(255, 30, 34, 43),
+                color: const Color.fromARGB(255, 30, 34, 43),
               ),
               title: Text(
                 Fav[index]["Name"],

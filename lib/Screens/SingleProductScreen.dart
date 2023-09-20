@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: file_names, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:miniproj/Lists/Favs.dart';
 import 'package:miniproj/Screens/CartScreen.dart';
 import 'package:miniproj/Screens/FavouriteScreen.dart';
 
@@ -57,12 +55,12 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FavouriteScreen(),
+                        builder: (context) => const FavouriteScreen(),
                       ),
                     );
                     setState(() {});
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.favorite,
                     color: Color.fromARGB(255, 145, 1, 20),
                   )),
@@ -71,11 +69,11 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => CartScreen(),
+                      builder: (context) => const CartScreen(),
                     ),
                   );
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.shopping_cart,
                   color: Color.fromARGB(255, 255, 200, 58),
                 ),
@@ -97,8 +95,8 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
             },
             onPressed2: () {},
             favColor: widget.ProductList[widget.Index]["IsFav"]
-                ? Color.fromARGB(255, 145, 1, 20)
-                : Color.fromARGB(255, 30, 34, 43),
+                ? const Color.fromARGB(255, 145, 1, 20)
+                : const Color.fromARGB(255, 30, 34, 43),
           ),
           CustomProductBottomWidget(
             Details: widget.ProductList[widget.Index]["Desc"],
