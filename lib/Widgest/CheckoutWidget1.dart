@@ -78,11 +78,15 @@ class _ChekOoutWidget1State extends State<CheckOutWidget1> {
                               controller: AddressController,
                             ),
                             actions: [
-                              TextButton(
+                              ElevatedButton(
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                     setState(() {});
                                   },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor:
+                                        const Color.fromARGB(255, 42, 75, 160),
+                                  ),
                                   child: const Text("Done"))
                             ],
                           ),
