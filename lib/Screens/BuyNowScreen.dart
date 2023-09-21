@@ -1,24 +1,27 @@
-// ignore_for_file: file_names
+// ignore_for_file: non_constant_identifier_names, file_names
 
 import 'package:flutter/material.dart';
-import 'package:miniproj/Lists/Payment.dart';
-import 'package:miniproj/Screens/CardScreen.dart';
-import 'package:miniproj/Screens/ConfirmedScreen.dart';
-import 'package:miniproj/Widgest/CheckoutWidget1.dart';
-import 'package:miniproj/Widgest/CompleteCartWidget1.dart';
+import 'package:miniproj/Widgest/BuyNowWidget.dart';
 
-import '../Lists/Cart.dart';
+import '../Lists/Payment.dart';
+import '../Widgest/CheckoutWidget1.dart';
 import '../Widgest/CheckoutWidget2.dart';
+import 'CardScreen.dart';
+import 'ConfirmedScreen.dart';
 import 'FavouriteScreen.dart';
 
-class CheckOutScreen extends StatefulWidget {
-  const CheckOutScreen({super.key});
+class BuyNowScreen extends StatefulWidget {
+  final int Price;
+  const BuyNowScreen({
+    super.key,
+    required this.Price,
+  });
 
   @override
-  State<CheckOutScreen> createState() => _CheckOutScreenState();
+  State<BuyNowScreen> createState() => _BuyNowScreenState();
 }
 
-class _CheckOutScreenState extends State<CheckOutScreen> {
+class _BuyNowScreenState extends State<BuyNowScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,9 +30,9 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
           color: Color.fromARGB(255, 30, 34, 43),
         ),
         backgroundColor: const Color.fromARGB(255, 255, 200, 58),
-        title: Text(
-          "Shopping Cart (${Cart.length.toString()})",
-          style: const TextStyle(
+        title: const Text(
+          "Buy Now",
+          style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.w500,
             color: Color.fromARGB(255, 30, 34, 43),
@@ -59,9 +62,9 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
           Expanded(
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: CompleteCartWidget1(
+              child: BuyNowWidget(
                 ButtonText: 'Confirm Order',
-                OnPressed: () {
+                onPressed: () {
                   if (selectedMethod[0]["Method"] == "Option 1") {
                     Navigator.push(
                         context,
@@ -74,6 +77,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                             builder: (context) => const CardScreen()));
                   }
                 },
+                Price: widget.Price,
               ),
             ),
           )

@@ -82,6 +82,7 @@ class _CompleteCartScreenState extends State<CompleteCartScreen> {
               children: [
                 Expanded(
                   child: CartWidget2(
+                    CartLength: Cart.length,
                     updateTotal: () {
                       totalValue();
                       setState(() {});

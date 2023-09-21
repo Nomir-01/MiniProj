@@ -93,7 +93,25 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
               await AddToFav(widget.ProductList, widget.Index);
               setState(() {});
             },
-            onPressed2: () {},
+            onPressed2: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  dismissDirection: DismissDirection.endToStart,
+                  duration: Duration(seconds: 2),
+                  content: Text(
+                    "No Options Available Yet",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      letterSpacing: 0.24,
+                      color: Color.fromARGB(255, 250, 251, 253),
+                    ),
+                  ),
+                  backgroundColor: Color.fromARGB(255, 30, 34, 43),
+                ),
+              );
+            },
             favColor: widget.ProductList[widget.Index]["IsFav"]
                 ? const Color.fromARGB(255, 145, 1, 20)
                 : const Color.fromARGB(255, 30, 34, 43),

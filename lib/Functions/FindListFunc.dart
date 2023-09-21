@@ -1,5 +1,7 @@
 // ignore_for_file: file_names, non_constant_identifier_names
 
+import 'package:miniproj/Lists/Deals.dart';
+
 import '../Lists/FIshList.dart';
 import '../Lists/FruitList.dart';
 import '../Lists/MeatList.dart';
@@ -18,6 +20,8 @@ FindList(category) {
     productList = Vegetables;
   } else if (category == "Snacks") {
     productList = Snacks;
+  } else if (category == "Deals") {
+    productList = Deals;
   }
   return productList;
 }

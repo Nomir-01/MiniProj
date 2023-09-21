@@ -6,11 +6,15 @@ class CustomProductTile extends StatefulWidget {
   final String? Tileimage;
   final String Price;
   final String Desc;
+  final VoidCallback InkWellOnPress;
+  final VoidCallback IconOnPress;
   const CustomProductTile({
     super.key,
     this.Tileimage,
     required this.Price,
     required this.Desc,
+    required this.InkWellOnPress,
+    required this.IconOnPress,
   });
 
   @override
@@ -29,7 +33,9 @@ class _CustomProductTileState extends State<CustomProductTile> {
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          widget.InkWellOnPress();
+        },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -53,7 +59,9 @@ class _CustomProductTileState extends State<CustomProductTile> {
                     ),
                   ),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        widget.IconOnPress();
+                      },
                       icon: const Icon(
                         Icons.add,
                         color: Color.fromARGB(255, 30, 34, 43),

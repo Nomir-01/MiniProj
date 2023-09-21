@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:miniproj/CustomWidgets/CustomCategoriesTile.dart';
 import 'package:miniproj/CustomWidgets/CustomProductTile.dart';
 import 'package:miniproj/CustomWidgets/CustomSlidingTiles.dart';
+import 'package:miniproj/Functions/AddToCart.dart';
 import 'package:miniproj/Lists/Categories.dart';
+import 'package:miniproj/Lists/Deals.dart';
 import 'package:miniproj/Screens/CategoryScreen.dart';
+import 'package:miniproj/Screens/SingleProductScreen.dart';
 
 class HomeWidget2 extends StatefulWidget {
   const HomeWidget2({super.key});
@@ -113,22 +116,181 @@ class _HomeWidget2State extends State<HomeWidget2> {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
-            children: const [
+            children: [
               CustomProductTile(
-                Price: "500",
-                Desc: "Orange Package 1 | 1 bundle",
+                Price: Deals[0]["Price"].toString(),
+                Desc: Deals[0]["Desc"],
+                InkWellOnPress: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SingleProductScreen(
+                          ProductList: Deals,
+                          Index: 0,
+                          SubHeading: "Hot Deals"),
+                    ),
+                  );
+                },
+                IconOnPress: () {
+                  AddToCart(Deals, 0);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      dismissDirection: DismissDirection.endToStart,
+                      duration: Duration(seconds: 2),
+                      content: Text(
+                        "Product Added To Cart",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 0.24,
+                          color: Color.fromARGB(255, 250, 251, 253),
+                        ),
+                      ),
+                      backgroundColor: Color.fromARGB(255, 255, 200, 58),
+                    ),
+                  );
+                },
               ),
               CustomProductTile(
-                Price: "500",
-                Desc: "Orange Package 1 | 1 bundle",
+                Price: Deals[1]["Price"].toString(),
+                Desc: Deals[1]["Desc"],
+                InkWellOnPress: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SingleProductScreen(
+                          ProductList: Deals,
+                          Index: 1,
+                          SubHeading: "Hot Deals"),
+                    ),
+                  );
+                },
+                IconOnPress: () {
+                  AddToCart(Deals, 1);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      dismissDirection: DismissDirection.endToStart,
+                      duration: Duration(seconds: 2),
+                      content: Text(
+                        "Product Added To Cart",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 0.24,
+                          color: Color.fromARGB(255, 250, 251, 253),
+                        ),
+                      ),
+                      backgroundColor: Color.fromARGB(255, 255, 200, 58),
+                    ),
+                  );
+                },
               ),
               CustomProductTile(
-                Price: "500",
-                Desc: "Orange Package 1 | 1 bundle",
+                Price: Deals[2]["Price"].toString(),
+                Desc: Deals[2]["Desc"],
+                InkWellOnPress: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SingleProductScreen(
+                          ProductList: Deals,
+                          Index: 2,
+                          SubHeading: "Hot Deals"),
+                    ),
+                  );
+                },
+                IconOnPress: () {
+                  AddToCart(Deals, 2);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      dismissDirection: DismissDirection.endToStart,
+                      duration: Duration(seconds: 2),
+                      content: Text(
+                        "Product Added To Cart",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 0.24,
+                          color: Color.fromARGB(255, 250, 251, 253),
+                        ),
+                      ),
+                      backgroundColor: Color.fromARGB(255, 255, 200, 58),
+                    ),
+                  );
+                },
               ),
               CustomProductTile(
-                Price: "500",
-                Desc: "Orange Package 1 | 1 bundle",
+                Price: Deals[3]["Price"].toString(),
+                Desc: Deals[3]["Desc"],
+                InkWellOnPress: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SingleProductScreen(
+                          ProductList: Deals,
+                          Index: 3,
+                          SubHeading: "Hot Deals"),
+                    ),
+                  );
+                },
+                IconOnPress: () {
+                  AddToCart(Deals, 3);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      dismissDirection: DismissDirection.endToStart,
+                      duration: Duration(seconds: 2),
+                      content: Text(
+                        "Product Added To Cart",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 0.24,
+                          color: Color.fromARGB(255, 250, 251, 253),
+                        ),
+                      ),
+                      backgroundColor: Color.fromARGB(255, 255, 200, 58),
+                    ),
+                  );
+                },
+              ),
+              CustomProductTile(
+                Price: Deals[4]["Price"].toString(),
+                Desc: Deals[4]["Desc"],
+                InkWellOnPress: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SingleProductScreen(
+                          ProductList: Deals,
+                          Index: 4,
+                          SubHeading: "Hot Deals"),
+                    ),
+                  );
+                },
+                IconOnPress: () {
+                  AddToCart(Deals, 4);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      dismissDirection: DismissDirection.endToStart,
+                      duration: Duration(seconds: 2),
+                      content: Text(
+                        "Product Added To Cart",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 0.24,
+                          color: Color.fromARGB(255, 250, 251, 253),
+                        ),
+                      ),
+                      backgroundColor: Color.fromARGB(255, 255, 200, 58),
+                    ),
+                  );
+                },
               ),
             ],
           ),

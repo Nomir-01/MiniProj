@@ -78,7 +78,8 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
+                          AnimatedContainer(
+                            duration: const Duration(milliseconds: 500),
                             height: _currentPage < 2 - 1 ? 5 : 2,
                             width: _currentPage < 2 - 1 ? 40 : 30,
                             decoration: BoxDecoration(
@@ -86,7 +87,8 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                               borderRadius: BorderRadius.circular(25),
                             ),
                           ),
-                          Container(
+                          AnimatedContainer(
+                            duration: const Duration(milliseconds: 500),
                             height: _currentPage < 2 - 1 ? 2 : 5,
                             width: _currentPage < 2 - 1 ? 30 : 40,
                             decoration: BoxDecoration(

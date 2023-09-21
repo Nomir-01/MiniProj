@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:miniproj/Functions/FindListFunc.dart';
@@ -7,9 +7,11 @@ import '../Lists/Cart.dart';
 
 class CartWidget2 extends StatefulWidget {
   final VoidCallback updateTotal;
+  final int? CartLength;
   const CartWidget2({
     super.key,
     required this.updateTotal,
+    this.CartLength,
   });
 
   @override
@@ -55,7 +57,7 @@ class _CartWidget2State extends State<CartWidget2> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: cartlength(),
+      itemCount: widget.CartLength ?? cartlength(),
       itemBuilder: ((context, index) {
         return Column(
           children: [

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:miniproj/CustomWidgets/CustomButton.dart';
+import 'package:miniproj/Screens/BuyNowScreen.dart';
 
 import '../Functions/AddToCart.dart';
 
@@ -95,7 +96,15 @@ class _CustomProductBottomWidgetState extends State<CustomProductBottomWidget> {
                   BorderColor: const Color.fromARGB(255, 250, 251, 253),
                   Size1: MediaQuery.of(context).size.width * 0.4,
                   Size2: MediaQuery.of(context).size.height * 0.065,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BuyNowScreen(
+                                  Price: widget.ProductList[widget.Index]
+                                      ["Price"],
+                                )));
+                  },
                 ),
               ],
             ),
