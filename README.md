@@ -1,17 +1,43 @@
-# miniproj
+# Flutter Grocery Store Application
 
-A new Flutter project.
+A multi-screen grocery shopping interface built with Flutter. The application covers product discovery, category browsing, favorites, cart management, checkout, payment selection, and order confirmation through reusable widgets and in-memory data models.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Onboarding flow
+- Product categories and searchable catalog structure
+- Product detail and grid views
+- Favorites and cart state
+- Checkout and payment-selection screens
+- Responsive Flutter targets for mobile, web, and desktop
 
-A few resources to get you started if this is your first Flutter project:
+## Project structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- `lib/Screens/` — application screens and navigation destinations
+- `lib/CustomWidgets/` — reusable product and layout components
+- `lib/Functions/` — cart, favorites, search, and total calculations
+- `lib/Lists/` — local product and UI data
+- `assets/images/` — application artwork and icons
+- `test/` — Flutter widget test location
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# MiniProj
+## Run locally
+
+Install a Flutter SDK compatible with the version constraint in `pubspec.yaml`, then run:
+
+```bash
+flutter pub get
+flutter run
+```
+
+Choose an attached device or a supported browser when prompted.
+
+## Validation
+
+```bash
+flutter analyze
+flutter test
+```
+
+## Project scope
+
+This repository focuses on the client-side shopping experience. Product information and cart state are represented locally rather than through a production commerce backend.
